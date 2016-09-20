@@ -1,29 +1,41 @@
 'use strict'
 
-$(document).ready(()=>{
-  console.log('sanity check')
+$(document).ready(() => {
+  $('select').material_select()
+  updatePostListener()
+  deletePostListener()
+  // getComments()
 })
 
-// function populateUsers(){
-//   $.get('/users/utility', function(data){
-//     $('.user-select').material_select()
-//     for (var i = 0; i < data.length; i++) {
-//       $('.user-select').append('<option>' + data[i].first_name + ' ' + data[i].last_name + '</option>')
-//     }
-//     // console.log(data)
+var id = parseInt(window.location.pathname.split('/')[2])
+
+// function getComments(){
+//   $.get('/posts/' + id + '/comments')
+//   .then(comments => {
+//     $('.container-custom').append(comments.body)
 //   })
 // }
-//
-// function addDeleteListener(){
-//   $('.btn-delete-post').click(function(){
-//     var id = parseInt(window.location.pathname.split('/')[2])
-//     // console.log(id)
-//     $.ajax({
-//       url: '/posts/' + id,
-//       method: 'DELETE',
-//       success: function(data){
-//         console.log(data)
-//       },
-//     })
-//   })
-// }
+
+function updatePostListener(){
+  $('.btn-edit-post').click(() => {
+    $.ajax({
+      url: `/posts/${id}`,
+      method: 'PUT',
+      success: () => {
+        console.log('post updated')
+      },
+    })
+  })
+}
+
+function deletePostListener(){
+  $('.btn-delete-post').click(() => {
+    $.ajax({
+      url: `/posts/${id}`,
+      method: 'DELETE',
+      success: () => {
+        console.log('post deleted')
+      },
+    })
+  })
+}

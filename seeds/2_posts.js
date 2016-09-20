@@ -14,22 +14,22 @@ exports.seed = function(knex, Promise) {
     }, {
       title: 'I love squirrels!',
       body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image_url: 'https://i.kinja-img.com/gawker-media/image/upload/xqkbwkexcl7udc5va7pn.jpg',
+      image_url: 'https://i.ytimg.com/vi/4yikpWtIFU8/maxresdefault.jpg',
       user_id: 2,
     }, {
       title: 'I love cats!',
       body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image_url: 'https://i.kinja-img.com/gawker-media/image/upload/xqkbwkexcl7udc5va7pn.jpg',
+      image_url: 'https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg',
       user_id: 3,
     }, {
       title: 'I love birds!',
       body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image_url: 'https://i.kinja-img.com/gawker-media/image/upload/xqkbwkexcl7udc5va7pn.jpg',
+      image_url: 'https://fishandgame.idaho.gov/ifwis/ibt/userfiles/image/photos/800/yellow-warbler--tom-munson.jpg',
       user_id: 4,
     }, {
       title: 'I love racoons!',
       body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image_url: 'https://i.kinja-img.com/gawker-media/image/upload/xqkbwkexcl7udc5va7pn.jpg',
+      image_url: 'https://i.ytimg.com/vi/D3LpQkOpD20/maxresdefault.jpg',
       user_id: 4,
     }]),
   ])

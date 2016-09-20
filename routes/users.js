@@ -11,18 +11,19 @@ router.get('/', function(req, res) {
 })
 
 router.get('/new', function(req, res) {
-  res.send('users/new')
+  res.render('users/new', {title: 'Add a User'})
 })
 
 router.get('/:id', function(req, res) {
   db.getOneUser(req.params.id).then(user => {
-    res.render('users/one', {title: user.first_name + ' ' + user.last_name, user: user})
+    res.render('users/one', {title: 'Animal Blog: ' + user.first_name + ' ' + user.last_name, user: user})
   })
 })
 
 router.post('/', function(req, res) {
-  db.createOne('users').then(() => {
-    res.redirect('/')
+  console.log(req.body)
+  db.createOneUser(req.body).then(() => {
+    res.redirect('/users')
   })
 })
 

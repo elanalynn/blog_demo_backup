@@ -11,13 +11,16 @@ router.get('/', function(req, res) {
 })
 
 router.get('/new', function(req, res) {
-  res.send('posts/new')
+  db.getAllUsers().then(users => {
+    res.render('posts/new', {title: 'Animal Blog: Write a Post', users: users})
+  })
 })
 
 router.get('/:id', function(req, res) {
   db.getOnePost(req.params.id).then(post => {
-    console.log('post', post)
-    res.render('posts/one', {title: post.title, post: post})
+    db.getAllUsers().then(users => {
+      res.render('posts/one', {title: 'Animal Blog: ' + post.title, post: post, users: users})
+    })
   })
 })
 
@@ -29,19 +32,19 @@ router.post('/', function(req, res) {
 })
 
 router.get('/:id/edit', function(req, res) {
-  res.render('/posts/edit')
+  db.getOnePost(req.params.id).then(post => {
+    res.render('posts/edit', {title: 'Animal Blog: ' + post.title, post: post})
+  })
 })
 
 router.put('/:id', function(req, res) {
-  db.updateOnePost(req.params.id).then(post => {
-    console.log('post', post)
+  db.updateOnePost(req.params.id).then(() => {
     res.redirect('/')
   })
 })
 
 router.delete('/:id', function(req, res) {
-  db.deleteOnePost(req.params.id).then(post => {
-    console.log('post', post)
+  db.deleteOnePost(req.params.id).then(() => {
     res.redirect('/')
   })
 })
