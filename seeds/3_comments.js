@@ -1,8 +1,16 @@
 
 exports.seed = function(knex, Promise) {
   return Promise.all([
-    knex('comments').insert({id: 1, colName: 'rowValue1'}),
-    knex('comments').insert({id: 2, colName: 'rowValue2'}),
-    knex('comments').insert({id: 3, colName: 'rowValue3'}),
+    knex('comments').insert([
+      {body: 'Cats are better than dogs.', post_id: 1, user_id: 1},
+      {body: 'Dogs are better than cats.', post_id: 3, user_id: 1},
+      {body: 'Birds are better than dogs.', post_id: 1, user_id: 4},
+      {body: 'Cats are better than birds.', post_id: 4, user_id: 3},
+      {body: 'Birds are better than dogs.', post_id: 1, user_id: 4},
+      {body: 'Squirrels are better than dogs.', post_id: 1, user_id: 2},
+      {body: 'Squirrels are better than cats.', post_id: 3, user_id: 2},
+      {body: 'Squirrels are better than birds.', post_id: 4, user_id: 2},
+      {body: 'Birds are better than squirrels.', post_id: 3, user_id: 4},
+    ]),
   ])
 }
